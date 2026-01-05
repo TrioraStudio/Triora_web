@@ -1,0 +1,592 @@
+/* =====================
+   RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   VARIABLES
+===================== */
+:root {
+  --bg: #f7f5f2;
+  --soft-bg: #fbfaf8;
+  --text: #1c1c1c;
+  --muted: #6f6f6f;
+  --accent: #bfa37a;
+}
+
+/* =====================
+   GLOBAL
+===================== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* =====================
+   NAVIGATION
+===================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 60px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+}
+
+.nav a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* =====================
+   HERO (HOME)
+===================== */
+.hero {
+  height: 90vh;
+  background:
+    linear-gradient(
+      rgba(247,245,242,0.2),
+      rgba(247,245,242,0.9)
+    ),
+    url("../images/hero.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 720px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.cta {
+  padding: 14px 36px;
+  border: 1px solid var(--accent);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* =====================
+   HOME – INTRO
+===================== */
+.intro {
+  max-width: 900px;
+  margin: 140px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 32px;
+}
+
+.text {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =====================
+   HOME – FEATURED
+===================== */
+.featured {
+  max-width: 1200px;
+  margin: 160px auto;
+  padding: 0 24px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.featured-grid img {
+  height: 420px;
+}
+
+/* =====================
+   HOME – WHY
+===================== */
+.why {
+  max-width: 1100px;
+  margin: 160px auto;
+  padding: 0 24px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.why-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.why-item p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =====================
+   HOME – CTA
+===================== */
+.cta-section {
+  max-width: 900px;
+  margin: 180px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.cta-section p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.cta-btn {
+  padding: 14px 42px;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* =====================
+   STORIES – INTRO
+===================== */
+.stories-intro {
+  max-width: 900px;
+  margin: 120px auto 100px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.stories-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--accent);
+  margin: 32px auto;
+}
+
+/* =====================
+   STORIES – WEDDINGS
+===================== */
+.story-block {
+  max-width: 1200px;
+  margin: 160px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.story-images {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+.story-images.reverse {
+  grid-template-columns: 1fr 2fr;
+}
+
+.story-images img {
+  height: 520px;
+}
+
+.story-images img:last-child {
+  height: 360px;
+}
+
+.story-caption {
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+/* =====================
+   PRE-WEDDING
+===================== */
+.prewedding {
+  max-width: 1200px;
+  margin: 160px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.prewedding h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+.prewedding-intro {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 24px auto 48px;
+  max-width: 600px;
+}
+
+.prewedding-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.prewedding-grid img {
+  height: 300px;
+}
+
+/* =====================
+   CANDID
+===================== */
+.candid {
+  max-width: 1200px;
+  margin: 160px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.candid h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+.candid-intro {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 24px auto 48px;
+  max-width: 600px;
+}
+
+.candid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.candid-grid img {
+  height: 260px;
+}
+
+/* =====================
+   FILMS
+===================== */
+.films {
+  max-width: 1100px;
+  margin: 180px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.films h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+.films-intro {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 24px auto 56px;
+  max-width: 650px;
+}
+
+.films-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.film-card video {
+  width: 100%;
+  max-height: 420px;
+}
+
+.film-caption {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* =====================
+   ABOUT – INTRO
+===================== */
+.about-intro {
+  max-width: 900px;
+  margin: 140px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.about-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  margin-bottom: 40px;
+}
+
+.about-intro p {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+
+/* =====================
+   ABOUT – WORK (CARD)
+===================== */
+.about-work {
+  margin: 160px auto;
+  padding: 0 24px;
+}
+
+.about-work-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--soft-bg);
+  padding: 80px 40px;
+  border-radius: 20px 20px 0 0;
+}
+
+.about-work h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.work-points p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* =====================
+   ABOUT – OUR APPROACH
+===================== */
+.about-approach {
+  max-width: 800px;
+  margin: 180px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.about-approach h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 56px;
+}
+
+.about-approach p {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/* =====================
+   ABOUT – SOFT CTA
+===================== */
+.about-cta {
+  max-width: 800px;
+  margin: 200px auto 160px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.about-cta p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* =====================
+   CONTACT PAGE
+===================== */
+.contact-intro {
+  max-width: 800px;
+  margin: 140px auto 80px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.contact-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  margin-bottom: 24px;
+}
+
+.contact-intro p {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 160px;
+  padding: 0 24px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  background: transparent;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  text-align: center;
+  padding: 40px 24px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 768px) {
+
+  .nav {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .featured-grid,
+  .why-grid,
+  .films-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-images,
+  .story-images.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .story-images img {
+    height: 300px;
+  }
+
+  .story-images img:last-child {
+    height: 240px;
+  }
+
+  .prewedding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 56px 24px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .about-approach {
+  margin: 140px auto;
+}
+
+.about-approach h2 {
+  font-size: 30px;
+}
+
+.about-cta h2 {
+  font-size: 30px;
+}
+
+.contact-intro h1 {
+  font-size: 36px;
+}
+
+}
