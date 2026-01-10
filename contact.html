@@ -48,36 +48,36 @@
 </footer>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
   (function () {
     emailjs.init("vQEV9jCLaplEklLcC");
   })();
 
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      emailjs
-        .sendForm(
-          "service_53kar6l",
-          "template_c4vcqis",
-          this
-        )
-        .then(
-          function () {
-            alert("Message sent successfully!");
-          },
-          function (error) {
-            alert("Failed to send message. Please try again.");
-            console.log(error);
-          }
-        );
-    });
+    emailjs.sendForm(
+      "service_53kar6l",
+      "template_c4vcqis",
+      this,
+      "vQEV9jCLaplEklLcC"
+    ).then(
+      function () {
+        alert("Message sent successfully!");
+      },
+      function (error) {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message.");
+      }
+    );
+  });
 </script>
 
 </body>
 </html>
+
 
 
 
